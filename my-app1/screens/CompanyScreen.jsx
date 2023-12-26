@@ -26,7 +26,7 @@ export default function CompanyScreen({ route, navigation }) {
     }, [dispatch]);
 
     const newHost = "192.168.1.95";
-
+    console.log(company.image_url.String())
     return (
     <ScrollView>
         <View style={styles.page}>
@@ -39,7 +39,7 @@ export default function CompanyScreen({ route, navigation }) {
             {company != null &&  company.name != "" && company.image_url != undefined &&
             <View style={{margin: 15}}>
                 <View>
-                    <Image style={styles.image} source={{ uri: `${company.image_url.replace("localhost", newHost)}` }}/>
+                    <Image style={styles.image} source={{ uri: company.image_url }}/>
                     <View>
                         <Text style={styles.textTitle}>{company.name}</Text>
                         <Text style={styles.text}>{company.description}</Text>

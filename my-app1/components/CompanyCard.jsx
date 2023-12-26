@@ -6,15 +6,11 @@ export default function CompanyCard({ navigation, ...props }) {
         navigation.navigate('Компаний', { id: props.company_id });
     };
 
-    const newHost = "192.168.1.95";
+    //const newHost = "192.168.1.95";
 
     return (
         <View style={styles.card}>
-            <Image
-                style={styles.image}
-                source={{ uri: `${props.image_url.replace("localhost", newHost)}` }}
-// resizeMode='contain'
-            />
+            <Image style={styles.image} source={{ uri: props.image_url }}/>
             <View style={styles.container}>
                 <Text style={styles.textGreen}>{props.name}</Text>
                 <View style={styles.row}>
