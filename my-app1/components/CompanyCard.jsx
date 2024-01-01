@@ -10,13 +10,9 @@ export default function CompanyCard({ navigation, ...props }) {
 
     return (
         <View style={styles.card}>
-            <Image style={styles.image} source={{ uri: props.image_url }}/>
             <View style={styles.container}>
+                <Image style={styles.image} source={{ uri: props.image_url }}/>
                 <Text style={styles.textGreen}>{props.name}</Text>
-                <View style={styles.row}>
-                    {/*<Text style={styles.text}>{props.summary}</Text>*/}
-                    {/*<Text style={styles.text}>{props.price} р.</Text>*/}
-                </View>
             </View>
             <Button title='Подробнее' onPress={handlePress} color='#BB87EAFF'/>
         </View>
